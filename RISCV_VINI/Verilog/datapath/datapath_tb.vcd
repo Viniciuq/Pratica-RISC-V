@@ -1,0 +1,255 @@
+$date
+	Mon Jun 09 16:03:29 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module datapath_tb $end
+$var reg 1 ! clk $end
+$var reg 1 " reset $end
+$scope module dut $end
+$var wire 1 ! clk $end
+$var wire 32 # pc_proximo [31:0] $end
+$var wire 1 " reset $end
+$var wire 1 $ zero $end
+$var wire 32 % write_data [31:0] $end
+$var wire 5 & rs2 [4:0] $end
+$var wire 5 ' rs1 [4:0] $end
+$var wire 32 ( rd2 [31:0] $end
+$var wire 32 ) rd1 [31:0] $end
+$var wire 5 * rd [4:0] $end
+$var wire 32 + pc_soma4 [31:0] $end
+$var wire 32 , pc_mux_out [31:0] $end
+$var wire 32 - pc_atual [31:0] $end
+$var wire 32 . pc_alvo [31:0] $end
+$var wire 32 / mem_data [31:0] $end
+$var wire 32 0 instrucao [31:0] $end
+$var wire 32 1 imm [31:0] $end
+$var wire 32 2 alu_result [31:0] $end
+$var wire 4 3 alu_opcode [3:0] $end
+$var wire 32 4 alu_mux_out [31:0] $end
+$var wire 1 5 RegWrite $end
+$var wire 1 6 MemtoReg $end
+$var wire 1 7 MemWrite $end
+$var wire 1 8 MemRead $end
+$var wire 1 9 Branch $end
+$var wire 1 : ALUSrc $end
+$var wire 2 ; ALUOp [1:0] $end
+$scope module add4_inst $end
+$var wire 32 < pc_out_soma4 [31:0] $end
+$var wire 32 = pc [31:0] $end
+$upscope $end
+$scope module add_imm $end
+$var wire 32 > pc_out_imm [31:0] $end
+$var wire 32 ? pc [31:0] $end
+$var wire 32 @ imm [31:0] $end
+$upscope $end
+$scope module alu_control_inst $end
+$var wire 3 A func3 [2:0] $end
+$var wire 7 B func7 [6:0] $end
+$var wire 2 C ALUOp [1:0] $end
+$var reg 4 D alu_opcode [3:0] $end
+$upscope $end
+$scope module alu_inst $end
+$var wire 4 E alu_opcode [3:0] $end
+$var wire 1 $ zero $end
+$var wire 32 F b [31:0] $end
+$var wire 32 G a [31:0] $end
+$var reg 32 H alu_result [31:0] $end
+$upscope $end
+$scope module cu_inst $end
+$var wire 7 I op [6:0] $end
+$var wire 1 5 RegWrite $end
+$var wire 1 6 MemtoReg $end
+$var wire 1 7 MemWrite $end
+$var wire 1 8 MemRead $end
+$var wire 1 9 Branch $end
+$var wire 1 : ALUSrc $end
+$var wire 2 J ALUOp [1:0] $end
+$var reg 8 K control_signals [7:0] $end
+$upscope $end
+$scope module dm_inst $end
+$var wire 1 8 MemRead $end
+$var wire 32 L addr [31:0] $end
+$var wire 1 ! clk $end
+$var wire 1 7 we $end
+$var wire 32 M wd [31:0] $end
+$var reg 32 N rd [31:0] $end
+$upscope $end
+$scope module im_inst $end
+$var wire 8 O addr [7:0] $end
+$var wire 32 P inst [31:0] $end
+$upscope $end
+$scope module imm_inst $end
+$var wire 32 Q inst [31:0] $end
+$var wire 7 R opcode [6:0] $end
+$var reg 32 S imm_out [31:0] $end
+$upscope $end
+$scope module ma_inst $end
+$var wire 1 : ALUSrc $end
+$var wire 32 T imm [31:0] $end
+$var wire 32 U saida [31:0] $end
+$var wire 32 V rd2 [31:0] $end
+$upscope $end
+$scope module mmtr_inst $end
+$var wire 1 6 MemtoReg $end
+$var wire 32 W alu_result [31:0] $end
+$var wire 32 X mem_data [31:0] $end
+$var wire 32 Y saida_memoria [31:0] $end
+$upscope $end
+$scope module muxpc $end
+$var wire 1 9 Branch $end
+$var wire 32 Z PC_alvo [31:0] $end
+$var wire 32 [ PC_soma_4 [31:0] $end
+$var wire 1 $ zero $end
+$var wire 32 \ pc_out [31:0] $end
+$upscope $end
+$scope module pc_inst $end
+$var wire 1 ! clk $end
+$var wire 32 ] pc_in [31:0] $end
+$var wire 1 " rst $end
+$var reg 32 ^ pc_out [31:0] $end
+$upscope $end
+$scope module rf_inst $end
+$var wire 1 ! clk $end
+$var wire 5 _ rd [4:0] $end
+$var wire 5 ` rs1 [4:0] $end
+$var wire 5 a rs2 [4:0] $end
+$var wire 32 b wd [31:0] $end
+$var wire 1 5 wr $end
+$var wire 32 c rd2 [31:0] $end
+$var wire 32 d rd1 [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx d
+bx c
+bx b
+bx a
+bx `
+bx _
+b0 ^
+bx ]
+bx \
+b100 [
+bx Z
+bx Y
+bx X
+bx W
+bx V
+bx U
+bx T
+bx S
+bx R
+bx Q
+bx P
+b0 O
+bx N
+bx M
+bx L
+bx K
+bx J
+bx I
+bx H
+bx G
+bx F
+bx E
+bx D
+bx C
+bx B
+bx A
+bx @
+b0 ?
+bx >
+b0 =
+b100 <
+bx ;
+x:
+x9
+x8
+x7
+x6
+x5
+bx 4
+bx 3
+bx 2
+bx 1
+bx 0
+bx /
+bx .
+b0 -
+bx ,
+b100 +
+bx *
+bx )
+bx (
+bx '
+bx &
+bx %
+x$
+bx #
+1"
+0!
+$end
+#5
+1!
+#10
+0!
+0"
+#15
+bx O
+bx +
+bx <
+bx [
+bx -
+bx =
+bx ?
+bx ^
+1!
+#20
+0!
+#25
+1!
+#30
+0!
+#35
+1!
+#40
+0!
+#45
+1!
+#50
+0!
+#55
+1!
+#60
+0!
+#65
+1!
+#70
+0!
+#75
+1!
+#80
+0!
+#85
+1!
+#90
+0!
+#95
+1!
+#100
+0!
+#105
+1!
+#110
+0!

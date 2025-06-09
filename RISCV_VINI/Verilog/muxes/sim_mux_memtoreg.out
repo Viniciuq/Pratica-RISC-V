@@ -1,0 +1,51 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "D:\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\iverilog\lib\ivl\va_math.vpi";
+S_000002f6d5269400 .scope module, "mux_memtoreg_tb" "mux_memtoreg_tb" 2 3;
+ .timescale 0 0;
+v000002f6d526a030_0 .var "MemtoReg", 0 0;
+v000002f6d526a0d0_0 .var "alu_result", 31 0;
+v000002f6d52b6520_0 .var "mem_data", 31 0;
+v000002f6d52b65c0_0 .net "saida_memoria", 31 0, L_000002f6d52b6660;  1 drivers
+S_000002f6d52b62f0 .scope module, "m1" "mux_memtoreg" 2 9, 3 3 0, S_000002f6d5269400;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "alu_result";
+    .port_info 1 /INPUT 32 "mem_data";
+    .port_info 2 /INPUT 1 "MemtoReg";
+    .port_info 3 /OUTPUT 32 "saida_memoria";
+v000002f6d52b6480_0 .net "MemtoReg", 0 0, v000002f6d526a030_0;  1 drivers
+v000002f6d5282f70_0 .net "alu_result", 31 0, v000002f6d526a0d0_0;  1 drivers
+v000002f6d526ae50_0 .net "mem_data", 31 0, v000002f6d52b6520_0;  1 drivers
+v000002f6d526aef0_0 .net "saida_memoria", 31 0, L_000002f6d52b6660;  alias, 1 drivers
+L_000002f6d52b6660 .functor MUXZ 32, v000002f6d526a0d0_0, v000002f6d52b6520_0, v000002f6d526a030_0, C4<>;
+    .scope S_000002f6d5269400;
+T_0 ;
+    %vpi_call 2 13 "$dumpfile", "mux_memtoreg.vcd" {0 0 0};
+    %vpi_call 2 14 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002f6d5269400 {0 0 0};
+    %pushi/vec4 11, 0, 32;
+    %store/vec4 v000002f6d526a0d0_0, 0, 32;
+    %pushi/vec4 11111, 0, 32;
+    %store/vec4 v000002f6d52b6520_0, 0, 32;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002f6d526a030_0, 0, 1;
+    %delay 5, 0;
+    %vpi_call 2 20 "$display", "alu_result = %d | mem_data = %d | MemtoReg = %b | saida_memoria = %d", v000002f6d526a0d0_0, v000002f6d52b6520_0, v000002f6d526a030_0, v000002f6d52b65c0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002f6d526a030_0, 0, 1;
+    %delay 5, 0;
+    %vpi_call 2 25 "$display", "alu_result = %d | mem_data = %d | MemtoReg = %b | saida_memoria = %d", v000002f6d526a0d0_0, v000002f6d52b6520_0, v000002f6d526a030_0, v000002f6d52b65c0_0 {0 0 0};
+    %vpi_call 2 27 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "mux_memtoreg_tb.v";
+    "mux_memtoreg.v";
