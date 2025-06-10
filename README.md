@@ -123,15 +123,12 @@ A simulação foi realizada no GTKWave utilizando um testbench que executa quatr
 
 ✅ Todas as instruções foram validadas com sucesso, com sinais de controle e dados fluindo corretamente pelos módulos do processador.
 
-
 ### 🛠️ Ferramentas Utilizadas
 
 - **Verilog**: linguagem de descrição de hardware
 - **Icarus Verilog**: compilação e simulação
 - **GTKWave**: visualização de ondas
 - **VS Code**: desenvolvimento
-
-
 
 ---
 
