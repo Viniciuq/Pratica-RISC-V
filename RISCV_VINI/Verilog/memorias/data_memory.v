@@ -32,7 +32,7 @@ module data_memory(addr, clk, wd, we, MemRead, rd);
     #100
 
     $display("Valor do memoria RAM[5] = %d", RAM[5]); #1
-    $display("Valor do memoria RAM[5] = %d", RAM[9]); #1
+    $display("Valor do memoria RAM[9] = %d", RAM[9]); #1
     $finish;
 
   end
