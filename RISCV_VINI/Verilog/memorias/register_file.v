@@ -29,14 +29,17 @@ module register_file(clk, rs1, rs2, rd, wr, wd, rd1, rd2);
     regfile[5] = 32'd0;   //resultado do lw x5, 0(x2) -> load
     
     regfile[4] = 10;       // valor a ser comparado com o x3, deve dar branch
-    #100
     
-    $display("Valor do registrador x1 = %d", regfile[1]); #1
-    $display("Valor do registrador x2 = %d", regfile[2]); #1
-    $display("Valor do registrador x3 = %d", regfile[3]); #1
-    $display("Valor do registrador x5 = %d", regfile[5]); #1
+  end
 
-    $finish;
+  initial begin
+    #50
+    $display("Valor do registrador x1 = %d", regfile[1]);
+    $display("Valor do registrador x2 = %d", regfile[2]);
+    $display("Valor do registrador x3 = %d", regfile[3]);
+    $display("Valor do registrador x4 = %d", regfile[4]);
+    $display("Valor do registrador x5 = %d", regfile[5]);
+
   end
   
 endmodule
