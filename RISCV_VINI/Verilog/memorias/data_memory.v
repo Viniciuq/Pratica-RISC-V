@@ -28,12 +28,13 @@ module data_memory(addr, clk, wd, we, MemRead, rd);
 
     RAM[5] = 32'd0; // resultado do store sw x1, 0(x2)
     RAM[9] = 32'd33; // valor a ser guardado no registrador x5
-    
-    #100
 
-    $display("Valor do memoria RAM[5] = %d", RAM[5]); #1
-    $display("Valor do memoria RAM[9] = %d", RAM[9]); #1
-    $finish;
+  end
+
+  initial begin 
+    #50
+    $display("Valor do memoria RAM[5] = %d", RAM[5]);
+    $display("Valor do memoria RAM[9] = %d", RAM[9]);
 
   end
   
