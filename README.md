@@ -114,12 +114,12 @@ A simulação foi realizada no GTKWave utilizando um testbench que executa quatr
 3. **`lw x5, 0(x2)`**  
    - `instrucao = 0x00410283`  
    - Carrega para `x5` o valor armazenado no endereço apontado por `x2 = 10`.  
-   - `MemRead = 1`, `mem_data = 33`, e `write_data = 33` indicam que o valor foi lido e gravado corretamente.
+   - `MemRead = 1`, `MemtoReg = 1`, `mem_data = 33`, e `write_data = 33` indicam que o valor foi lido e gravado corretamente.
 
 4. **`beq x3, x4, 12`**  
    - `instrucao = 0x00418C63`  
    - Compara `x3 = 10` com `x4 = 10`, e como são iguais (`zero = 1`), o salto de 12 bytes é realizado.  
-   - `pc_alvo = 36`, `pc_mux_out = 36`, e `pc_atual = 36` confirmam o funcionamento do desvio condicional.
+   - `pc_alvo = 36` e `pc_mux_out = 36` confirmam o funcionamento do desvio condicional.
 
 ✅ Todas as instruções foram validadas com sucesso, com sinais de controle e dados fluindo corretamente pelos módulos do processador.
 
