@@ -97,7 +97,7 @@ O **Gerador de Imediato (imm_gen)** é responsável por extrair e estender corre
 
 A simulação foi realizada no GTKWave utilizando um testbench que executa quatro instruções específicas. A imagem abaixo representa a execução dessas instruções no processador implementado:
 
-![Simulação GTKWave](./simulacao.png)
+![Simulação GTKWave](RISCV_VINI/Verilog/simulacao.png)
 
 📌 **Instruções Testadas e Resultados:**
 
