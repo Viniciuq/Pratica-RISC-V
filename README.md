@@ -1,5 +1,5 @@
 
-# RISC-V de Ciclo Único em Verilog
+# RISC-V 32 bits de Ciclo Único em Verilog
 
 Este projeto implementa um processador RISC-V de ciclo único utilizando a linguagem de descrição de hardware Verilog. O desenvolvimento faz parte do projeto final da disciplina **Arquitetura de Computadores** da Universidade Católica de Santos.
 
@@ -43,7 +43,7 @@ O processador foi modularizado em componentes individuais. Abaixo está a descri
 
 #### 4. **Memórias**
 
-*Memória de instruções*
+*4.1 Memória de instruções*
 
 - Responsável por fornecer a instrução correspondente ao endereço do Program Counter (PC).
 
@@ -53,7 +53,10 @@ As instruções são carregadas a partir de um arquivo externo (instructions.txt
 
 `$readmemh("instructions.txt", mem, 0, 3);`
 
-*Memoria de dados*
+*4.2 Memoria de dados*
+
+- Entrada: `addr`, `wd`, `we`, `MemRead`, `RegWrite`
+  - Saída: `rd`
 
 - Utilizada para operações de leitura (lw) e escrita (sw) realizadas durante a execução do programa.
 
@@ -145,7 +148,7 @@ A simulação foi realizada no GTKWave utilizando um testbench que executa quatr
 | MUXes                | ✅ Pronto 
 | Data Memory          | ✅ Pronto 
 | Somadores            | ✅ Pronto 
-| Testbench            | ✅ Pronto 
+| Testbenchs           | ✅ Pronto 
 
 ---
 
