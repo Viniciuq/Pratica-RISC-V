@@ -108,8 +108,8 @@ A simulação foi realizada no GTKWave utilizando um testbench que executa quatr
 
 2. **`sw x1, 0(x2)`**  
    - `instrucao = 0x00112023`  
-   - Armazena `x1 = 15` no endereço apontado por `x2 = 10`.  
-   - `MemWrite = 1` e `mem_data = 15` confirmam a operação de escrita na memória.
+   - Armazena `x1 = 15` no endereço apontado por `x2 = 5`.  
+   - `MemWrite = 1` confirma a operação de escrita na memória.
 
 3. **`lw x5, 0(x2)`**  
    - `instrucao = 0x00410283`  
