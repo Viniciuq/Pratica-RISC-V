@@ -28,7 +28,7 @@ module register_file(clk, rs1, rs2, rd, wr, wd, rd1, rd2);
     regfile[1] = 32'd0;   // resultado da add x1, x2, x3 -> soma
     regfile[5] = 32'd0;   //resultado do lw x5, 0(x2) -> load
     
-    regfile[4] = 10;       // valor a ser comparado com o x3, deve dar branch
+    regfile[4] = 32'd10;       // valor a ser comparado com o x3, deve dar branch
     
   end
 
